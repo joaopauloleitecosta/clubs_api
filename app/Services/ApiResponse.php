@@ -17,4 +17,26 @@ class ApiResponse
             200
         );
     }
+
+    public static function error($message): JsonResponse
+    {
+        return response()->json(
+            [
+                'status_code' => 500,
+                'message' => $message
+            ],
+            500
+        );
+    }
+
+    public static function unauthorized(): JsonResponse
+    {
+        return response()->json(
+            [
+                'status_code' => 401,
+                'message' => 'unauthorized'
+            ],
+            401
+        );
+    }
 }

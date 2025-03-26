@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Club;
+use App\Services\ApiResponse;
 use Illuminate\Http\Request;
 
 class ClubController extends Controller
@@ -11,7 +13,8 @@ class ClubController extends Controller
      */
     public function index()
     {
-        //
+        //return all clubs
+        return ApiResponse::success(Club::all());
     }
 
     /**
@@ -19,7 +22,22 @@ class ClubController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate the request
+        $request->validate(
+            [
+                'name' => 'required|unique:clubs',
+                'description' => 'required',
+                'stadium_capacity' => 'required',
+                'founded' => 'required',
+                'image' => 'required',
+                'nickname' => 'required'
+            ]
+        );
+
+        //add a new club in the database
+        $club = Club::create($request->all());
+
+        return ApiResponse::success($club);
     }
 
     /**
@@ -27,7 +45,13 @@ class ClubController extends Controller
      */
     public function show(string $id)
     {
-        //
+        //show club details
+        $club = Club::find($id);
+        if($club) {
+            return ApiResponse::success($club);
+        } else {
+            return ApiResponse::error('Club not found');
+        }
     }
 
     /**
@@ -35,7 +59,26 @@ class ClubController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //validate the request
+        $request->validate(
+            [
+                'name' => 'required|unique:clubs,name,'.$id,
+                'description' => 'required',
+                'stadium_capacity' => 'required',
+                'founded' => 'required',
+                'image' => 'required',
+                'nickname' => 'required'
+            ]
+        );
+
+        //update club in the database
+        $club = Club::find($id);
+        if($club) {
+            $club->update($request->all());
+            return ApiResponse::success($club);
+        } else {
+            return ApiResponse::error('Club not found');
+        }
     }
 
     /**
@@ -43,6 +86,13 @@ class ClubController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        //delete the club
+        $club = Club::find($id);
+        if($club) {
+            $club->delete();
+            return ApiResponse::success('Club deleted successfully');
+        } else {
+            return ApiResponse::error('Club not found');
+        }
     }
 }
