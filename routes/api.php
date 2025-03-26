@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClubController;
 use App\Services\ApiResponse;
 use Illuminate\Http\Request;
@@ -10,3 +11,6 @@ Route::get('/status', function() {
 }); 
 
 Route::apiResource('clubs', ClubController::class);
+
+//auth routes
+Route::post('/login', [AuthController::class, 'login']);
