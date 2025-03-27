@@ -13,6 +13,11 @@ class ClubController extends Controller
      */
     public function index()
     {
+        //token abilities - check if token allow this result
+        if(!auth()->user()->tokenCan('client:list')) {
+            return ApiResponse::error('Access denied', 401);
+        }
+
         //return all clubs
         return ApiResponse::success(Club::all());
     }
@@ -45,6 +50,11 @@ class ClubController extends Controller
      */
     public function show(string $id)
     {
+        //token abilities - check if token allow this result
+        if(!auth()->user()->tokenCan('client:detail')) {
+            return ApiResponse::error('Access denied', 401);
+        }
+
         //show club details
         $club = Club::find($id);
         if($club) {
