@@ -1,0 +1,183 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "clubs_api",
+    "collectionId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+    "dateExported": "2025-03-27T19:08:57.111Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "441c7f88-f58b-4515-868d-9167cb2d177b",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Status",
+            "url": "http://localhost/clubs_api/public/api/status",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-03-25T01:42:13.540Z",
+            "modified": "2025-03-27T18:55:40.413Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "2|zLTGT6LGRQTqwskUPqhqRHDheNpr0UTLE2erkGBXe5869686"
+            }
+        },
+        {
+            "_id": "5fefdd1f-07f8-4bad-8db0-6839e8016dd5",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "All Clubs",
+            "url": "http://localhost/clubs_api/public/api/clubs",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-03-26T12:20:01.304Z",
+            "modified": "2025-03-27T18:55:52.896Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "2|zLTGT6LGRQTqwskUPqhqRHDheNpr0UTLE2erkGBXe5869686"
+            }
+        },
+        {
+            "_id": "8f0006e2-538d-4125-bd50-06addcc3f88a",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost/clubs_api/public/api/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-03-26T13:27:42.209Z",
+            "modified": "2025-03-27T18:49:39.663Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"app_consumer02@email.com\",\n  \"password\": \"abc123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5ba7aaed-fcc7-488d-857e-7c48492f5fd4",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Store Club",
+            "url": "http://localhost/clubs_api/public/api/clubs",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-03-26T12:47:00.629Z",
+            "modified": "2025-03-26T13:11:38.621Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"name\",\n  \"description\": \"description\",\n  \"stadium_capacity\": 10,\n  \"founded\": 20,\n  \"nickname\": \"nick\",\n  \"image\": \"image\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "089bb3e5-b825-4c3d-93b7-f6ce0ad94bb5",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Show Club",
+            "url": "http://localhost/clubs_api/public/api/clubs/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-03-26T12:51:31.260Z",
+            "modified": "2025-03-27T18:55:58.983Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "2|zLTGT6LGRQTqwskUPqhqRHDheNpr0UTLE2erkGBXe5869686"
+            }
+        },
+        {
+            "_id": "8552e357-2d94-4940-aaa3-2b85616c4b4f",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Logout",
+            "url": "http://localhost/clubs_api/public/api/logout",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-03-26T14:55:43.340Z",
+            "modified": "2025-03-26T15:01:29.388Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"app_consumer02@email.com\",\n  \"password\": \"abc123456\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "5|jqAi2M0sc5SS8NqO8cQqkuuFq5Azbbhtn4pUZqSc17bb84a5"
+            }
+        },
+        {
+            "_id": "1f7c42a8-e646-46a5-aeae-c3180e66d1b3",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Update Club",
+            "url": "http://localhost/clubs_api/public/api/clubs/4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-03-26T13:01:31.596Z",
+            "modified": "2025-03-26T13:11:20.824Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"name5\",\n  \"description\": \"description\",\n  \"stadium_capacity\": 310,\n  \"founded\": 1900,\n  \"nickname\": \"nickname4\",\n  \"image\": \"image\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c5b2052e-05d8-45e3-85b7-caa65f2841b0",
+            "colId": "eac32e78-953a-4a07-aae3-adb342eeb80c",
+            "containerId": "",
+            "name": "Delete Club",
+            "url": "http://localhost/clubs_api/public/api/clubs/4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-03-26T13:02:28.011Z",
+            "modified": "2025-03-26T13:11:27.792Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        }
+    ],
+    "ref": "BIRAX9CXB_DDJ7ZCW_EcT8X8q3iuLbdsKYqamivIL8lB_7xNBRbLzfptru3re2amVPSpfWw1M2o8assYmETULA"
+}
