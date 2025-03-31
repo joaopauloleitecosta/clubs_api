@@ -1,8 +1,18 @@
-# Clubs API 
+# Attention: Readme under construction
+
+# Clubs API
 API project about football teams.
 
 # About
 Clubs is an API that allows you to register, update, list and delete records about football teams. Information such as name, description, founded, stadium capacity, nickname and image of a team are represented in the API. 
+
+# Types of fields represented in the API
+name - string
+description - string
+stadium capacity - integer
+founded - integer
+nickname - string
+image - string
 
 # Routes list
 GET        api/clubs   
@@ -13,7 +23,7 @@ DELETE     api/clubs/{club}
 POST       api/login   
 POST       api/logout
 
-# Tecnologies used
+# Technologies used
 ## Back end
 - PHP
 - Laravel
@@ -24,16 +34,16 @@ POST       api/logout
 Prerequisites: PHP and Composer instaled.
 
 ```bash
-# clonar repositório
+# clone repository
 git clone https://github.com/joaopauloleitecosta/clubs_api.git
 
-# entrar na pasta do projeto back end
-cd backend
+# enter the project folder
+cd name_clone_repository
 
 # install dependencies
 composer install
 
-# criar arquivo de configuração
+# create configuration file
 cp .env.example .env
 
 # open .env and config database credentials
@@ -44,13 +54,13 @@ DB_DATABASE=database_name
 DB_USERNAME=user
 DB_PASSWORD=password
 
-# gerar chave da aplicação
+# generate application key
 php artisan key:generate
 
-# config database - Se ainda não tiver criado o banco de dados no MySQL, crie manualmente. E depois rode o comando:
+# config database - If you haven't created the database in MySQL yet, create it manually. Then run the command:
 php artisan migrate
 
-# executar o projeto
+# execute the project
 php artisan serve
 ```
 
